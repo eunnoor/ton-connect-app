@@ -1,24 +1,22 @@
-// Import TON Connect SDK (installed via npm)
-import { TonConnect } from '@tonconnect/sdk';
-
 // Initialize TON Connect with the manifest URL
 const tonConnect = new TonConnect({
-    manifestUrl: 'https://raw.githubusercontent.com/eunnoor/ton-connect-app/main/tonconnect-manifest.json'  // You need to host this file
+    manifestUrl: 'https://raw.githubusercontent.com/eunnoor/ton-connect-app/main/tonconnect-manifest.json'  // Use the raw URL here
 });
 
-// Add event listener for the Connect Wallet button
+// Connect Wallet button click event
 document.querySelector('.wallet-button').addEventListener('click', async () => {
+    console.log('Connect Wallet button clicked'); // Log when the button is clicked
     try {
         const walletConnection = await tonConnect.connect();
         console.log('Connected wallet:', walletConnection);
-        // Handle the connected wallet information here (e.g., show wallet address)
     } catch (error) {
         console.error('Connection failed', error);
     }
 });
 
-// Add event listener for the Connect Wallet to Claim! button (same functionality)
+// Connect Wallet to Claim button click event
 document.querySelector('.claim-button').addEventListener('click', async () => {
+    console.log('Connect Wallet to Claim button clicked'); // Log when the button is clicked
     try {
         const walletConnection = await tonConnect.connect();
         console.log('Connected wallet:', walletConnection);
