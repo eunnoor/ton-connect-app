@@ -1,4 +1,11 @@
-// Initialize TON Connect with the manifest URL
+// Check if TON Connect SDK is loaded
+if (typeof TonConnect !== 'undefined') {
+    console.log('TON Connect SDK is loaded');
+} else {
+    console.error('TON Connect SDK is not loaded');
+}
+
+// Initialize TON Connect
 const tonConnect = new TonConnect({
     manifestUrl: 'https://raw.githubusercontent.com/eunnoor/ton-connect-app/main/tonconnect-manifest.json'
 });
