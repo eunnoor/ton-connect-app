@@ -3,7 +3,7 @@ import { TonConnect } from '@tonconnect/sdk';
 
 // Initialize TON Connect with the manifest URL
 const tonConnect = new TonConnect({
-    manifestUrl: 'https://github.com/eunnoor/ton-connect-app/blob/main/tonconnect-manifest.json'  // You need to host this file
+    manifestUrl: 'https://raw.githubusercontent.com/eunnoor/ton-connect-app/main/tonconnect-manifest.json'  // You need to host this file
 });
 
 // Add event listener for the Connect Wallet button
