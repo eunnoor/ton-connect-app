@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TON Connect Wallet</title>
-    
-    <!-- Add styles here -->
     <style>
+        /* Basic styling */
         body {
             background-color: #000;
             color: white;
@@ -19,12 +18,10 @@
             align-items: center;
             height: 100vh;
         }
-
         .container {
             max-width: 400px;
             padding: 20px;
         }
-
         .wallet-button, .claim-button {
             background-color: #fff;
             color: #000;
@@ -36,7 +33,6 @@
             margin: 10px 0;
             width: 100%;
         }
-
         .wallet-button:hover, .claim-button:hover {
             background-color: #ccc;
         }
@@ -49,8 +45,8 @@
         <button class="claim-button">Connect Wallet to Claim!</button>
     </div>
 
-    <!-- TON Connect SDK script from new CDN -->
-    <script src="https://unpkg.com/@tonconnect/sdk@0.1.5/dist/tonconnect.umd.min.js"></script>
+    <!-- Load TON Connect SDK (local or from CDN) -->
+    <script src="sdk/tonconnect.umd.min.js"></script>
 
     <!-- Your custom script -->
     <script src="script.js"></script>
