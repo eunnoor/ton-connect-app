@@ -3,52 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TON Connect Wallet</title>
+    <title>Button Click Debug</title>
     <style>
-        /* Basic styling */
         body {
             background-color: #000;
             color: white;
             font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            margin: 0;
         }
         .container {
-            max-width: 400px;
-            padding: 20px;
+            text-align: center;
         }
-        .wallet-button, .claim-button {
+        .button {
             background-color: #fff;
             color: #000;
-            padding: 15px 20px;
+            padding: 10px 20px;
+            margin: 10px;
             border: none;
-            border-radius: 8px;
-            font-size: 16px;
             cursor: pointer;
-            margin: 10px 0;
-            width: 100%;
-        }
-        .wallet-button:hover, .claim-button:hover {
-            background-color: #ccc;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Connect Your TON Wallet</h1>
-        <button class="wallet-button">Connect Wallet</button>
-        <button class="claim-button">Connect Wallet to Claim!</button>
+        <h1>Test Buttons</h1>
+        <button class="button" id="wallet-button">Connect Wallet</button>
+        <button class="button" id="claim-button">Connect Wallet to Claim!</button>
     </div>
 
-    <!-- Load TON Connect SDK (local or from CDN) -->
-    <script src="sdk/tonconnect.umd.min.js"></script>
-
-    <!-- Your custom script -->
     <script src="script.js"></script>
 </body>
 </html>

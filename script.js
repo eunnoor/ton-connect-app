@@ -1,28 +1,23 @@
-// Ensure the DOM is loaded before running the script
+// Simple button click logging
 document.addEventListener('DOMContentLoaded', () => {
-    // Check if buttons exist in the DOM
-    const walletButton = document.querySelector('.wallet-button');
-    const claimButton = document.querySelector('.claim-button');
+    const walletButton = document.getElementById('wallet-button');
+    const claimButton = document.getElementById('claim-button');
 
     if (walletButton) {
         console.log('Wallet button found');
+        walletButton.addEventListener('click', () => {
+            console.log('Connect Wallet button clicked');
+        });
     } else {
         console.error('Wallet button not found');
     }
 
     if (claimButton) {
         console.log('Claim button found');
+        claimButton.addEventListener('click', () => {
+            console.log('Connect Wallet to Claim button clicked');
+        });
     } else {
         console.error('Claim button not found');
     }
-
-    // Event listener for Connect Wallet button
-    walletButton.addEventListener('click', () => {
-        console.log('Connect Wallet button clicked');
-    });
-
-    // Event listener for Connect Wallet to Claim button
-    claimButton.addEventListener('click', () => {
-        console.log('Connect Wallet to Claim button clicked');
-    });
 });
