@@ -5,29 +5,28 @@ if (typeof TonConnect !== 'undefined') {
     console.error('TON Connect SDK is not loaded');
 }
 
-// Initialize TON Connect
-const tonConnect = new TonConnect({
-    manifestUrl: 'https://raw.githubusercontent.com/eunnoor/ton-connect-app/main/tonconnect-manifest.json'
-});
+// Check if buttons exist
+const walletButton = document.querySelector('.wallet-button');
+const claimButton = document.querySelector('.claim-button');
 
-// Event listener for Connect Wallet button
-document.querySelector('.wallet-button').addEventListener('click', async () => {
+if (walletButton) {
+    console.log('Wallet button found');
+} else {
+    console.error('Wallet button not found');
+}
+
+if (claimButton) {
+    console.log('Claim button found');
+} else {
+    console.error('Claim button not found');
+}
+
+// Attach event listener to Connect Wallet button
+walletButton.addEventListener('click', () => {
     console.log('Connect Wallet button clicked');
-    try {
-        const walletConnection = await tonConnect.connect();
-        console.log('Connected wallet:', walletConnection);
-    } catch (error) {
-        console.error('Connection failed', error);
-    }
 });
 
-// Event listener for Connect Wallet to Claim button
-document.querySelector('.claim-button').addEventListener('click', async () => {
+// Attach event listener to Connect Wallet to Claim button
+claimButton.addEventListener('click', () => {
     console.log('Connect Wallet to Claim button clicked');
-    try {
-        const walletConnection = await tonConnect.connect();
-        console.log('Connected wallet:', walletConnection);
-    } catch (error) {
-        console.error('Connection failed', error);
-    }
 });
